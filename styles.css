@@ -1,0 +1,94 @@
+*
+{
+    font-family: Roboto;
+}
+
+*::selection
+{
+    background-color: #ff8d29;
+    color: white;
+}
+
+html, body
+{
+    height: 100%;
+    margin: 0;
+}
+
+main
+{
+    background-image: url("images/neon_white_bg.png");
+    height: 100%;
+
+    position: relative;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: 0.5s;
+}
+
+body.active main
+{
+    background-image: url("images/neon_black_bg.png");
+}
+
+div
+{
+    display: block;
+}
+
+#toggle
+{
+    position: relative;
+
+    float: right;
+    right: 8px;
+    top: 8px;
+
+    display: block;
+    width: 64px;
+    height: 32px;
+    border-radius: 32px;
+    background: #eee;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15),
+                inset 0 1px 1px rgba(0, 0, 0, 0.15),
+                inset 0 -1px 1px rgba(0, 0, 0, 0.15);
+}
+
+#toggle.active
+{
+    background: #333;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5),
+                inset 0 1px 1px rgba(0, 0, 0, 0.5),
+                inset 0 -1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#toggle .indicator
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(to bottom, #eee, #ccc);
+    border-radius: 50%;
+    transform: scale(0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1),
+                inset 0 -1px 1px rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+}
+
+#toggle.active .indicator
+{
+    left: 32px;
+    background: linear-gradient(to bottom, #555, #222);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5),
+                inset 0 1px 1px rgba(255, 255, 255, 0.05),
+                inset 0 -1px 1px rgba(255, 255, 255, 0.05);
+    
+}
