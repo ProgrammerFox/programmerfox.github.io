@@ -185,3 +185,29 @@ div
         background-image: url("images/neon_black_bg_mobile.png");
     }
 }
+
+@media screen and (max-width: 450px)
+{
+    body .right_menu
+    {
+        float: none;
+        left: 8px;
+        margin-top: 10px;
+    }
+
+    header
+    {
+        height: 85px;
+        width: 100%;
+    }
+
+    header ul
+    {
+        width: 100%;
+    }
+
+    header ul li
+    {
+        width: 33%;
+    }
+}
